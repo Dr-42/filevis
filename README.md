@@ -46,7 +46,7 @@ The samples for this were generated from my other project's source code [Heim En
 ![HDR](assets/autumn.hdr.png "HDR")
 ![JPG](assets/backpack.jpg.png "JPG")
 ![PNG](assets/Brunhild_diffuse2.png.png "PNG")
-![Normal Map](assets/Brunilda_normals.png.png "Normals")
+![Normal Map](assets/Brunhilda_normals.png.png "Normals")
 ![Plain Text](assets/main.c.png "Plain text(C file)")
 ![TTF Font](assets/OCRAEXT.TTF.png "Font")
 ![Blender file](assets/susan.blend.png "Blender File")
