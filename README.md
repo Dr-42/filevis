@@ -37,3 +37,16 @@ To convert all files inside a folder
 $ mkdir out
 $ ./../generate_folder.s <folder_path> 0
 ```
+
+## Samples
+
+The samples for this were generated from my other project's source code [Heim Engine](https://github.com/Dr-42/Heim_Engine)
+
+![AO Map](assets/ao.png.png "AO Map")
+![HDR](assets/autumn.hdr.png "HDR")
+![JPG](assets/backpack.jpg.png "JPG")
+![PNG](assets/Brunhild_diffuse2.png.png "PNG")
+![Normal Map](assets/Brunilda_normals.png.png "Normals")
+![Plain Text](assets/main.c.png "Plain text(C file)")
+![TTF Font](assets/OCRAEXT.TTF.png "Font")
+![Blender file](assets/susan.blend.png "Blender File")
