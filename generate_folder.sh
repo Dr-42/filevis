@@ -7,6 +7,7 @@
 
 depth=$2
 base=$(basename "$1" ".png")
+shopt -s dotglob
 for file in $1/*; do
 	if [ -d "$file" ]; then
 		../generate_folder.sh "$file" $((depth+1))

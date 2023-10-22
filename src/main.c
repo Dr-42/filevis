@@ -15,7 +15,7 @@ int main(int argc, char** argv) {
 	uint8_t buf;
 	uint8_t prev = 0;
 
-	uint8_t data[256 * 256] = { 0 };
+	uint8_t data[256 * 256 * 3] = { 0 };
 
 	FILE* file = fopen(filename, "rb");
 	size_t res = fread(&buf, 1, sizeof(buf), file);
@@ -29,13 +29,23 @@ int main(int argc, char** argv) {
 	while (res != 0) {
 		uint8_t x = prev;
 		uint8_t y = buf;
-		data[x + y * 256] = 255;
+		size_t index = x + y * 256;
+		data[index * 3 + 0] = prev;
+		data[index * 3 + 1] = buf;
+		if (data[index * 3] != 0) {
+			if(data[index * 3 + 2] == 0) {
+				data[index * 3 + 2] = 1;
+			}
+			else {
+				data[index * 3 + 2] = data[index * 3 + 2] + 1;
+			}
+		}
 		prev = buf;
 		i++;
 		res = fread(&buf, 1, sizeof(buf), file);
 	}
 	
-	int write_res = stbi_write_png(outfile, 256, 256, 1, data, 256);
+	int write_res = stbi_write_png(outfile, 256, 256, 3, data, 256 * 3);
 	if (write_res == 0) {
 		printf("Error writing file");
 	}
